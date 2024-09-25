@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const books = await getCollection('books');
+
+export const prerender = true;
 ---
 
 <Layout title="Dev Books | Libros para desarrolladores">
@@ -13,9 +15,9 @@ const books = await getCollection('books');
       <div class="px-4 mx-auto max-w-screen-xl">
         <div class="grid gap-6 md:grid-cols-2">
           {
-            books.map((book: any) => {
+            books.map((book) => {
               const { slug, data } = book;
-              const { title, author, img, readtime, description, buy } = data;
+              const { title, img, readtime, description } = data;
 
               return (
                 <article class="flex">

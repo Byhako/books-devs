@@ -1,0 +1,16 @@
+---
+import { SCORE_API_ENDPOINT } from "astro:env/server";
+
+let scoreValue = '99'
+
+try {
+  const res = await fetch(SCORE_API_ENDPOINT)
+  scoreValue = await res.text()
+} catch (error) {
+  scoreValue = '0'
+}
+---
+
+<div class="text-xs">
+  ⭐ Puntuación: {scoreValue.trim()}/5
+</div>
