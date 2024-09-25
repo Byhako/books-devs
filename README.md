@@ -22,11 +22,17 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── BuyButton.astro
+│   │   └── Logo.astro
+│   │   └── Score.astro
+│   ├── content/
+│   │   └── books
+│   │   └── config.ts
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
+│       └── libros/[id].astro
 └── package.json
 ```
 
